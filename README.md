@@ -67,8 +67,8 @@ values fall back to the default and are reported in the log.
 |---|---|---|
 | `ResetOnSuspicionLost` | `true` | `false` = hardcore: any suspicion above the threshold, ever, lets that guard page for the rest of the heist |
 | `SuspicionThreshold` | `0.0` | Suspicion progress (0.0–1.0) that counts as "saw me". `0.0` means even a 0.0004 flicker counts; raise it to ignore brief glances |
-| `LogToFile` | `true` | Write `KaisSilentAssasin.log` in the mod folder |
-| `LogToUE4SSLog` | `true` | Write the same lines to `UE4SS.log` / console (independent of the above) |
+| `LogToFile` | `false` | Write `KaisSilentAssasin.log` in the mod folder |
+| `LogToUE4SSLog` | `false` | Write the same lines to `UE4SS.log` / console (independent of the above) |
 | `TruncateLogOnHeistStart` | `true` | One heist per log file; `false` appends and grows without bound |
 | `MaxPagerAnswers` | `-1` | `-1` stock, `0` first answered pager starts the search, `1` one safe answer, `2` two, … **Lowering only** |
 
@@ -155,7 +155,8 @@ game used for which digit, and `style_for` in the script is the place to fix.
 
 ## Reading the log
 
-`KaisSilentAssasin.log`, in the mod folder, rewritten each heist by default.
+`KaisSilentAssasin.log`, in the mod folder, written when `LogToFile = true`
+and rewritten each heist by default.
 
     --- heist start (<what triggered it>) ---
     silenced / restored / re-silenced <guard>   awareness changes
@@ -190,7 +191,8 @@ but never played), and multiplayer as a client.
 ## After a PAYDAY 3 update
 
 1. Update PD3 UE4SS first — its offsets are tied to a specific game build.
-2. Launch and check the log for `hooks: ... =true` on the first line. A `false`
+2. Turn on `LogToFile`, launch and check the log for `hooks: ... =true` on
+   the first line. A `false`
    means that hook's function was renamed.
 3. `could not set bIsPagerSnatched` means the property changed name.
 4. On a new heist, check `live max N` against what the HUD shows at the start:

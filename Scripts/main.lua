@@ -84,11 +84,12 @@ ResetOnSuspicionLost = true
 SuspicionThreshold = 0.0
 
 ; Write this mod's own log file (KaisSilentAssasin.log, in this same folder).
-LogToFile = true
+; Off by default; turn it on to check what the mod did in a heist.
+LogToFile = false
 
 ; Also write the same lines to UE4SS.log / the UE4SS console.
 ; That file is wiped by UE4SS on every game launch.
-LogToUE4SSLog = true
+LogToUE4SSLog = false
 
 ; Start each heist with a fresh KaisSilentAssasin.log.
 ; false = append across heists, which lets the file grow without bound.
@@ -127,8 +128,8 @@ MaxPagerAnswers = -1
 local DEFAULTS = {
     resetonsuspicionlost    = true,
     suspicionthreshold      = 0.0,
-    logtofile               = true,
-    logtoue4sslog           = true,
+    logtofile               = false,
+    logtoue4sslog           = false,
     truncatelogonheiststart = true,
     maxpageranswers         = -1,
 }
