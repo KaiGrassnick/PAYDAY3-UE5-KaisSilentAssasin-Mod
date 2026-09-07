@@ -5,8 +5,7 @@ heister when it died — and optionally, how many pagers you may answer before
 the search starts.
 
 Written for **PAYDAY 3 on Unreal Engine 5.5.4** (`++payday3+candidate_PATCH3_8`),
-as a UE4SS Lua mod. It replaces an older cooked-asset pak mod that stopped
-working when the game moved from UE4 to UE5.
+as a UE4SS Lua mod.
 
 ---
 
