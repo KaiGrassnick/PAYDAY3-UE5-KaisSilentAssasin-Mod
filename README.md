@@ -43,7 +43,9 @@ search starts. The HUD radio counter follows it.
 1. Install PD3 UE4SS: extract it into
    `<game>\PAYDAY3\PAYDAY3\Binaries\Win64\` so `dwmapi.dll` sits next to
    `PAYDAY3-Win64-Shipping.exe`, with the `UE4SS` folder beside it.
-2. Copy this whole folder into `...\Binaries\Win64\UE4SS\Mods\`, giving:
+
+2. Download the latest: KaisSilentAssasin.zip from the latest release ([GitHub Release Page]<https://github.com/KaiGrassnick/PAYDAY3-UE5-KaisSilentAssasin-Mod/releases>)
+3. Extract / Copy the containing folder (KaisSilentAssasin) into `...\Binaries\Win64\UE4SS\Mods\`, giving:
 
        UE4SS\Mods\KaisSilentAssasin\config.ini
        UE4SS\Mods\KaisSilentAssasin\enabled.txt
